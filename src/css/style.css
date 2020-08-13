@@ -51,7 +51,6 @@ body {
 
 .services {
   margin-bottom: 20px;
-  min-width: 50vw;
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: 1fr;
