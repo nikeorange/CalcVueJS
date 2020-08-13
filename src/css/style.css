@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  color: #212529;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.block-sale {
+  border: 1px #343a40 solid;
+  margin-bottom: 20px;
+  padding-bottom: 60px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.header-h5 {
+  background: #6f42c1;
+  color: #fff;
+  padding: 10px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.basic_services {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.basic_services__item {
+  padding-bottom: 15px;
+}
+
+.services {
+  margin-bottom: 20px;
+  min-width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3px;
+  list-style: none
+}
+
+.services__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  width: 50%;
+}
+
+.total {
+  position: absolute;
+  width: 175px;
+  bottom: 2%;
+  right: 1%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 6px;
+}
+
+.total span:last-child {
+  border: 1px #343a40 solid;
+  border-radius: 4px;
+  padding: 3px;
+  margin-top: -3px;
+  margin-left: 3px;
+  width: 100px;
+  text-align: left;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px
+}
+
+.switch input {
+  display: none
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s
+}
+
+input:checked+.slider {
+  background-color: #6f42c1
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #6f42c1
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px)
+}
+
+.slider.round {
+  border-radius: 34px
+}
+
+.slider.round:before {
+  border-radius: 50%
+}
+
+
+.row:last-child {
+  position: relative;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.row:last-child .total{
+  position: relative;
+  width: 420px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row:last-child .total span:last-child{
+  width: 120px;
+}
+
+@media (max-width: 699px) {
+  .services__item {
+    width: 100%;
+  }
+}

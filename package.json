@@ -1,0 +1,29 @@
+{
+  "name": "vue-libs-simple-toggle",
+  "version": "1.0.5",
+  "description": "Simple and very light vue.js (v2) toggle component",
+  "main": "vue_libs_simple_toggle.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLibs/vue-libs-simple-toggle.git"
+  },
+  "keywords": [
+    "vue",
+    "toggle",
+    "vue.js",
+    "switch",
+    "toggle-button",
+    "switch-button",
+    "state-button",
+    "switcher",
+    "toggler"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-js-toggle-button": "^1.3.3"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://unpkg.com/vue"></script>
+  <title>test_simdev</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+  <div id="main" class="container" v-cloak>
+
+    <div class="row block-sale">
+      <div class="header-h5">
+        <h5>
+          Базовая комплектация
+        </h5>
+      </div>
+      <div class="coll">
+        <ul class="basic_services">
+          <li class="basic_services__item" v-for="basic_service in basic_services" v-bind:class="{ 'active' : basic_service.active }">
+            <span>{{basic_service.name}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="coll">
+        <!---->
+      </div>
+      <div class="coll">
+        <p class="total">
+          <span>Стоимость:</span> <span>{{basicTotal()}}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="row block-sale">
+      <div class="header-h5">
+        <h5>Дополнительные пакеты</h5>
+      </div>
+      <div class="coll">
+        <ul class="services">
+          <li class="services__item" v-for="service in services" v-bind:class="{ 'active' : service.active }">
+            <span>{{service.name}}</span>
+            <span>
+              <label class="switch">
+                <input type="checkbox" @click="toggleCheckbox => toggleActive(service)">
+                <div class="slider round"></div>
+              </label>
+            </span>
+          </li>
+        </ul>
+        <p class="total">
+          <span>Стоимость:</span> <span>{{DopTotal()}}</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <p class="total">
+        <span>Итоговая стоимость:</span> <span>{{basicTotal() + DopTotal()}}</span>
+      </p>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+<script src="src/js/script.js">
+
+</script>
+
+</html>
